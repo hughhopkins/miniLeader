@@ -1,3 +1,4 @@
+// On server startup, create some players if the database is empty.
 Meteor.startup(function () {
    if (Players.find().count() === 0) {
      var names = ["a",
