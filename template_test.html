@@ -1,0 +1,14 @@
+<template name="test">
+
+{{#if selected_name}}
+  <div>
+    <div>{{selected_name}}</div>
+    <input type="button" class="inc" value="Give 5 points" />
+  </div>
+  {{/if}}
+
+  {{#unless selected_name}}
+  <div>Click a player to select</div>
+  {{/unless}}
+
+</template>
