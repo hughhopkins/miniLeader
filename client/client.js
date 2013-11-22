@@ -17,13 +17,13 @@ Template.player.selected = function () {
 Template.leaderboard.events({
   'click input.inc': function () {
     Players.update(Session.get("selected_player"), {$inc: {score: 5}});
-    console.log("upvote");
+    console.log("upvote - Template.leaderboard.events");
   }
 });
 
 Template.player.events({
   'click': function () {
     Session.set("selected_player", this._id);
-    console.log("session.set");
+    console.log("mouseClick - Template.player.events");
   }
 });
