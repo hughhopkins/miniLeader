@@ -1,1 +1,1 @@
-web: node leaderboard.js
+web: node miniLeader.js
