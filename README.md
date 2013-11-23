@@ -2,7 +2,7 @@ This is a very stripped down version of the Meteor Leaderboard template. Getting
 
 A live version can be found at:
 
-minileader.meteor.com 
+http://minileader.meteor.com 
 
 and the github is:
 

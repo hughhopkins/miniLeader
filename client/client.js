@@ -18,6 +18,7 @@ Template.leaderboard.events({
   'click input.inc': function () {
     Players.update(Session.get("selected_player"), {$inc: {score: 5}});
     console.log("upvote - Template.leaderboard.events");
+    GoSquared.DefaultTracker.TrackEvent("upvote", "1");
   }
 });
 
@@ -25,5 +26,7 @@ Template.player.events({
   'click': function () {
     Session.set("selected_player", this._id);
     console.log("mouseClick - Template.player.events");
+    GoSquared.DefaultTracker.TrackEvent("mouseClick", "2");
+
   }
 });
