@@ -18,7 +18,8 @@ Template.leaderboard.events({
   'click input.inc': function () {
     Players.update(Session.get("selected_player"), {$inc: {score: 5}});
     console.log("upvote - Template.leaderboard.events");
-    GoSquared.DefaultTracker.TrackEvent("upvote", "1");
+    GoSquared.DefaultTracker.TrackEvent("Changed Tab", {tab: 2, other: "properties"});
+    mixpanel.track("upvote");
   }
 });
 
@@ -27,6 +28,5 @@ Template.player.events({
     Session.set("selected_player", this._id);
     console.log("mouseClick - Template.player.events");
     GoSquared.DefaultTracker.TrackEvent("mouseClick", "2");
-
   }
 });
